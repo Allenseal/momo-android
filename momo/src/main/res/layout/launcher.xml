@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout1"
+	android:layout_width="fill_parent"
+	android:layout_height="100dp"
+	android:layout_gravity="bottom"
+	android:orientation="vertical"
+	android:background="@drawable/gradient"
+    >
+
+        
+    <ImageView 
+        android:id="@+id/imgClose"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:src="@drawable/close_circle"
+	/>
+    
+    
+</LinearLayout>

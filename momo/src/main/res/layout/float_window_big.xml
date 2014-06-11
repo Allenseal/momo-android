@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/big_window_layout"
+	android:layout_width="200dip"
+	android:layout_height="133dip"
+	android:background="@drawable/bg_big"
+    >
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+        <ImageButton
+            android:id="@+id/w_feed"
+            android:layout_gravity="center_vertical|left|top"
+            android:layout_width="106dp" android:layout_height="78dp"
+            android:layout_weight="1"
+            android:background="@drawable/widget_feed_button_release" android:padding="0dp"/>
+        <ImageButton
+            android:id="@+id/w_cost"
+            android:layout_gravity="center_vertical|right|top"
+            android:layout_width="106dp" android:layout_height="78dp"
+            android:layout_weight="1"
+            android:background="@drawable/widget_cost_button_release"/>
+    </FrameLayout>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/return_button" android:layout_gravity="center_horizontal|bottom"
+            android:background="@color/transparent" android:textColor="@color/white"
+            android:src="@drawable/ic_action_back" android:layout_marginBottom="5dp"
+            />
+</FrameLayout>

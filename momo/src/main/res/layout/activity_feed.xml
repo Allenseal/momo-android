@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context="com.cs.app.momo.Cost" android:orientation="vertical" android:background="@color/main_bg">
+
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="$"
+            android:id="@+id/dollar"
+            android:background="@color/white" android:textSize="@dimen/home_money_text_size"
+            android:gravity="center_vertical|right" android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_vertical_margin" android:layout_gravity="center_vertical"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true" android:focusableInTouchMode="true">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent"
+                      android:layout_height="wrap_content" android:background="@color/green_light"
+                      android:id="@+id/linearLayout">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:textAppearance="?android:attr/textAppearanceLarge" android:text="@string/date"
+                      android:id="@+id/textView2" android:layout_gravity="center_vertical|left"
+                      android:layout_marginLeft="16dp"
+                      android:layout_marginRight="16dp" android:textColor="@color/white"/>
+        </LinearLayout>
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                style="@style/SpinnerButtonStyle2"
+                android:id="@+id/date"
+                android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:paddingLeft="8dp"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent"
+                      android:layout_height="wrap_content" android:background="@color/green_light"
+                      android:id="@+id/linearLayout2">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:textAppearance="?android:attr/textAppearanceLarge" android:text="@string/comment"
+                      android:id="@+id/textView3" android:layout_gravity="center_vertical|left"
+                      android:layout_marginLeft="16dp"
+                      android:layout_marginRight="16dp" android:textColor="@color/white"/>
+        </LinearLayout>
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/comment"
+                android:layout_gravity="bottom|left"
+                android:layout_marginLeft="16dp" android:layout_marginRight="16dp"
+                />
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:layout_gravity="bottom">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:id="@+id/cancel"
+                android:layout_gravity="bottom" android:layout_weight="1" android:background="@color/gray"
+                android:layout_marginRight="1dp"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:id="@+id/save"
+                android:layout_gravity="bottom" android:layout_weight="1" android:background="@color/gray"
+                android:layout_marginLeft="1dp"/>
+    </LinearLayout>
+
+</LinearLayout>

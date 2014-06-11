@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="navigation_drawer_width">240dp</dimen>
+    <dimen name="home_feed_height">40dp</dimen>
+    <dimen name="home_money_text_size">35sp</dimen>
+    <dimen name="month_size">30sp</dimen>
+    <dimen name="home_power_size">40sp</dimen>
+    <dimen name="wheel_size">12dp</dimen>
+    <dimen name="sub_title">15sp</dimen>
+    <dimen name="cost_title">50sp</dimen>
+    <dimen name="null_back">200dp</dimen>
+    <dimen name="home_pet_name_size">25sp</dimen>
+</resources>

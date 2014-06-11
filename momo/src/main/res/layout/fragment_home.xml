@@ -1,0 +1,201 @@
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        tools:context="com.cs.app.momo.MainActivity$HomeFragment"
+        android:background="@color/gray_light"
+        android:weightSum="4"
+        android:id="@+id/home_view"
+        android:tag="home_view"
+        android:name="com.cs.app.momo.HomeFragment">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:weightSum="12">
+        <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp" android:layout_weight="7">
+            <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_gravity="bottom">
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/stage_view" android:src="@drawable/stage"
+                        android:layout_gravity="center"/>
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/monster_view" android:src="@drawable/penguin_normal"
+                        android:layout_gravity="center"/>
+            </FrameLayout>
+        </FrameLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp" android:layout_weight="5">
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:weightSum="3">
+
+        <FrameLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp" android:layout_weight="2" android:weightSum="2"
+                >
+
+            <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" android:layout_gravity="bottom" android:gravity="bottom"
+                    >
+                <com.cs.app.momo.StyledTextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Penguin"
+                        android:id="@+id/pet_name" android:layout_gravity="center_horizontal|bottom"
+                        android:textSize="@dimen/home_pet_name_size" android:gravity="center"
+                        android:background="@color/gray" android:textColor="@color/white"/>
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/feed_btn" android:src="@drawable/home_feed_button_release"
+                        android:background="@color/transparent"
+                        android:layout_gravity="bottom|left"
+                        />
+                <ImageButton
+                        android:id="@+id/cost_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/home_cost_button_release"
+                        android:background="@color/transparent" android:layout_gravity="bottom|right"
+                        />
+            </FrameLayout>
+        </FrameLayout>
+        <FrameLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp" android:layout_weight="1" android:weightSum="2"
+                >
+
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_gravity="bottom"
+                    android:layout_marginBottom="0dp" android:background="@color/coco" android:paddingTop="0dp">
+
+                <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1">
+                    <de.passsy.holocircularprogressbar.HoloCircularProgressBar
+                            android:id="@+id/holoCircularProgressBar1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:stroke_width="@dimen/wheel_size"
+                            app:progress_color="@color/green_light"
+                            app:progress_background_color="@color/white"
+                            app:marker_visible="false"
+                            app:thumb_visible="false"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/power_text"
+                            android:textColor="@color/gray" android:layout_gravity="center" android:textSize="@dimen/home_power_size"
+                            android:text="45"/>
+
+
+                </FrameLayout>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" android:layout_gravity="bottom"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1">
+                    <FrameLayout
+
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" android:layout_weight="1"
+                            >
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" android:layout_weight="1"
+                                android:layout_gravity="center_vertical">
+                            <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/total"
+                                    android:layout_gravity="center_vertical"
+                                    android:id="@+id/home_total" android:textColor="@color/white" android:padding="0dp"
+                                    android:paddingTop="0dp" android:paddingBottom="0dp"
+                                    android:gravity="center_vertical"
+                                    android:background="@color/green_light" android:textSize="@dimen/sub_title"
+                                    />
+                            <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:text="$0"
+                                    android:lines="1" android:ellipsize="end"
+                                    android:id="@+id/feed_text" android:layout_gravity="center_vertical|left"
+                                    android:textSize="@dimen/home_money_text_size"
+                                    android:padding="0dp" android:paddingLeft="0dp" android:paddingTop="0dp"
+                                    android:paddingRight="0dp" android:paddingBottom="0dp" android:gravity="left"
+                                    android:textColor="@color/gray"/>
+                        </LinearLayout>
+                    </FrameLayout>
+                    <FrameLayout
+
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" android:layout_weight="1"
+                            >
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+                            <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/monthly_cost"
+                                    android:layout_gravity="center_vertical|left"
+                                    android:textColor="@color/white" android:padding="0dp"
+                                    android:paddingTop="0dp" android:paddingBottom="0dp"
+                                    android:gravity="center_vertical"
+                                    android:background="@color/red" android:textSize="@dimen/sub_title"
+                                    android:id="@+id/monthlycost"/>
+                            <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:text="$0"
+                                    android:lines="1" android:ellipsize="end"
+                                    android:id="@+id/cost_text" android:layout_gravity="center_vertical|left"
+                                    android:textSize="@dimen/home_money_text_size"
+                                    android:padding="0dp" android:paddingLeft="0dp" android:paddingTop="0dp"
+                                    android:paddingRight="0dp" android:paddingBottom="0dp" android:gravity="left"
+                                    android:textColor="@color/gray"/>
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</FrameLayout>

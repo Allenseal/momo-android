@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MoMo</string>
+    <string name="action_widget">Widget</string>
+    <string name="action_comment">Comment</string>
+    <string name="title_section1">Home</string>
+    <string name="title_section2">History</string>
+    <string name="title_section3">Reward</string>
+    <string name="title_section4">Friend</string>
+    <string name="title_section5">Collection</string>
+    <string name="title_section6">Settings</string>
+
+    <string name="total">Total</string>
+    <string name="monthly_cost">Monthly Cost</string>
+    <string name="jan">Jan</string>
+    <string name="feb">Feb</string>
+    <string name="mar">Mar</string>
+    <string name="apr">Apr</string>
+    <string name="may">May</string>
+    <string name="jun">Jun</string>
+    <string name="jul">Jul</string>
+    <string name="aug">Aug</string>
+    <string name="sep">Sep</string>
+    <string name="oct">Oct</string>
+    <string name="nov">Nov</string>
+    <string name="dec">Dec</string>
+
+    <string name="feed">feed</string>
+    <string name="cost">cost</string>
+
+    <string name="kind">Kind</string>
+    <string name="date">Date</string>
+    <string name="comment">Comment</string>
+
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_Total_feed">Total feed</string>
+    <string name="home_monthly_cost">Monthly cost</string>
+    <string name="home_power">Power</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="title_activity_feed">Feed</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_cost">Cost</string>
+
+    <string name="title_activity_editfeed">Feed</string>
+    <string name="title_activity_editcost">Cost</string>
+    <string name="information">Information</string>
+    <string name="delete">Delete</string>
+    <string name="modify">Modify</string>
+    <string name="cost_info">Cost info</string>
+    <string name="feed_info">Feed info</string>
+
+    <string name="kind_food">Food</string>
+    <string name="kind_traffic">Traffic</string>
+    <string name="kind_fun">Fun</string>
+    <string name="kind_others">Others</string>
+    <string name="kind_yummy">Yummy</string>
+</resources>

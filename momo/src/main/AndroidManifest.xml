@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cs.app.momo"
+    >
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:debuggable="false">
+        <activity
+            android:name="com.cs.app.momo.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.cs.app.momo.Feed"
+                android:label="@string/title_activity_feed"
+                android:screenOrientation="portrait">>
+        </activity>
+        <activity
+                android:name="com.cs.app.momo.Cost"
+                android:label="@string/title_activity_cost"
+                android:screenOrientation="portrait">>
+        </activity>
+        <activity
+            android:name="com.cs.app.momo.EditCost"
+            android:label="@string/title_activity_editcost"
+            android:screenOrientation="portrait">>
+        </activity>
+        <activity
+            android:name="com.cs.app.momo.EditFeed"
+            android:label="@string/title_activity_editfeed"
+            android:screenOrientation="portrait">>
+        </activity>
+        <service android:name=".FloatWindowService">
+            <intent-filter>
+                <action android:name="android.intent.action.CONFIGURATION_CHANGED"/>
+            </intent-filter>
+        </service>
+        <activity android:name=".MyAdd"/>
+    </application>
+
+</manifest>
