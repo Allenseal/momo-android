@@ -305,6 +305,14 @@ public class DataFragment extends Fragment {
 
     @Override
     public void onResume() {
+//        if(MyWindowManager.smallWindow != null) {
+//            // 關閉懸浮窗，移除所有懸浮窗，並停止Service
+//            MyWindowManager.removeLauncher(getActivity());
+//            MyWindowManager.removeBigWindow(getActivity());
+//            MyWindowManager.removeSmallWindow(getActivity());
+//            Intent intent = new Intent(getActivity(), FloatWindowService.class);
+//            getActivity().stopService(intent);
+//        }
         setList();
         super.onResume();
     }

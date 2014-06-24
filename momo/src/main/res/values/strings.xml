@@ -8,7 +8,7 @@
     <string name="title_section2">History</string>
     <string name="title_section3">Reward</string>
     <string name="title_section4">Friend</string>
-    <string name="title_section5">Collection</string>
+    <string name="title_section5">Monster</string>
     <string name="title_section6">Settings</string>
 
     <string name="total">Total</string>
@@ -62,4 +62,12 @@
     <string name="kind_fun">Fun</string>
     <string name="kind_others">Others</string>
     <string name="kind_yummy">Yummy</string>
+
+    <string name="quick_add">Quick add</string>
+    <string name="category">Category</string>
+
+    <string name="select_monster">Select Monster</string>
+    <string name="select_sure">Do you want to select</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>

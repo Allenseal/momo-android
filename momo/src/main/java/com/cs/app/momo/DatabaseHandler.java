@@ -270,6 +270,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 } while (cursor.moveToNext());
             }
         }
+        db.close();
         return oneDay;
     }
 
@@ -293,6 +294,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         } else {
             re = new Statistics(statistics.getMonth(), statistics.getYear(), 0);
         }
+        db.close();
         return re;
     }
 
@@ -305,6 +307,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             cost = cursor.getInt(0);
         }
+        db.close();
         return cost;
     }
 
@@ -317,6 +320,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             sum = cursor.getInt(0);
         }
+        db.close();
         return sum;
     }
 

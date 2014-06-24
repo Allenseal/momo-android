@@ -18,7 +18,8 @@ import com.astuetz.PagerSlidingTabStrip;
 import com.suredigit.inappfeedback.FeedbackDialog;
 
 
-public class MainActivity extends FragmentActivity implements DataFragment.OnHeadlineSelectedListener{
+public class MainActivity extends FragmentActivity implements DataFragment.OnHeadlineSelectedListener,
+            CollectionFragment.OnHeadlineSelectedListener {
 
     private final Handler handler = new Handler();
 
@@ -33,6 +34,8 @@ public class MainActivity extends FragmentActivity implements DataFragment.OnHea
 
     private HomeFragment homeFragment;
     private DataFragment dataFragment;
+    private CollectionFragment collectionFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -186,7 +189,7 @@ public class MainActivity extends FragmentActivity implements DataFragment.OnHea
 
     public class MyPagerAdapter extends FragmentPagerAdapter {
 
-        private final String[] TITLES = { getResources().getString(R.string.title_section1), getResources().getString(R.string.title_section2)}; //more
+        private final String[] TITLES = { getResources().getString(R.string.title_section1), getResources().getString(R.string.title_section2), getResources().getString(R.string.title_section5)}; //more
 
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -211,6 +214,9 @@ public class MainActivity extends FragmentActivity implements DataFragment.OnHea
                 case 1:
                     dataFragment = DataFragment.newInstance(position);
                     return dataFragment;
+                case 2:
+                    collectionFragment = CollectionFragment.newInstance(position);
+                    return collectionFragment;
 //                case 2:
 //                    return ChartFragment.newInstance(position);
                 default:
@@ -228,6 +234,22 @@ public class MainActivity extends FragmentActivity implements DataFragment.OnHea
 
         if(homeFragment != null) {
             homeFragment.setView();
+        }
+    }
+
+    public void onMonsterChanged(int position) {
+        // The user selected the headline of an article from the HeadlinesFragment
+        // Do something here to display that article
+
+        if(homeFragment != null) {
+            homeFragment.setView();
+            if(MyWindowManager.smallWindow != null){
+                MyWindowManager.resetParamsSwitch = false;
+                MyWindowManager.removeSmallWindow(this);
+                MyWindowManager.createSmallWindow(this);
+                MyWindowManager.resetParamsSwitch = true;
+            }
+
         }
     }
 

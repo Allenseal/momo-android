@@ -28,7 +28,7 @@
                 <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/stage_view" android:src="@drawable/stage"
+                        android:id="@+id/stage_view" android:src="@drawable/penguin_stage"
                         android:layout_gravity="center"/>
                 <ImageView
                         android:layout_width="wrap_content"

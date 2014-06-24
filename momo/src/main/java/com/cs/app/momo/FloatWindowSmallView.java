@@ -110,6 +110,9 @@ public class FloatWindowSmallView extends LinearLayout {
 	private ImageView imgMonster;
 	private float xInScreen_tmp, yInScreen_tmp;
 
+    private int monsterNumber = 0;
+    private String[] monsterName = {"Penguin", "Bear", "Seal"};
+
 	public FloatWindowSmallView(Context context) {
 		super(context);
 		windowManager = (WindowManager) context
@@ -133,18 +136,18 @@ public class FloatWindowSmallView extends LinearLayout {
         PE.commit();
 
         String status = settings.getString("MONSTER_STATUS", "sleep");
-        String monsterName = settings.getString("MONSTER_NAME", "penguin");
-        Log.d("status", monsterName);
+        monsterNumber = settings.getInt("MONSTER_NUMBER", 0);
+        Log.d("status", monsterName[monsterNumber]);
         Log.d("status", status);
         int id;
         if(status.equals("normal")){
-            id = getResources().getIdentifier(monsterName + "_n", "drawable", "com.cs.app.momo");
+            id = getResources().getIdentifier(monsterName[monsterNumber].toLowerCase() + "_n", "drawable", "com.cs.app.momo");
         }else if(status.equals("hungry")){
-            id = getResources().getIdentifier(monsterName + "_h", "drawable", "com.cs.app.momo");
+            id = getResources().getIdentifier(monsterName[monsterNumber].toLowerCase() + "_h", "drawable", "com.cs.app.momo");
         }else if(status.equals("death")){
-            id = getResources().getIdentifier(monsterName + "_d", "drawable", "com.cs.app.momo");
+            id = getResources().getIdentifier(monsterName[monsterNumber].toLowerCase() + "_d", "drawable", "com.cs.app.momo");
         }else{
-            id = getResources().getIdentifier(monsterName + "_s", "drawable", "com.cs.app.momo");
+            id = getResources().getIdentifier(monsterName[monsterNumber].toLowerCase() + "_s", "drawable", "com.cs.app.momo");
         }
         imgMonster.setImageResource(id);
         rocketImg.setImageResource(id);
@@ -163,6 +166,7 @@ public class FloatWindowSmallView extends LinearLayout {
 	    	//Toast.makeText(getContext(), "Long press!", Toast.LENGTH_LONG).show();
 	    	goStartAPP();
             longTouch = true;
+
 
 	    }   
 	};
@@ -191,14 +195,18 @@ public class FloatWindowSmallView extends LinearLayout {
 			xInScreen = event.getRawX();
 			yInScreen = event.getRawY() - getStatusBarHeight();
 
-			// �Y���ʽd���j, �h�P�w�ʧ@�����ʦӫD�Q���
-			if(Math.abs(xInScreen_tmp-xInScreen)>15.0f || Math.abs(yInScreen_tmp-yInScreen)>15.0f) {
-				handler.removeCallbacks(mLongPressed);
-			}
-			
-			// ���ʪ��ɭԧ�s�p�a�B�������A�M��m
-			updateViewStatus();
-			updateViewPosition();
+
+
+            // �Y���ʽd���j, �h�P�w�ʧ@�����ʦӫD�Q���
+            if(Math.abs(xInScreen_tmp-xInScreen)>15.0f || Math.abs(yInScreen_tmp-yInScreen)>15.0f) {
+                handler.removeCallbacks(mLongPressed);
+            }
+
+            // ���ʪ��ɭԧ�s�p�a�B�������A�M��m
+            updateViewStatus();
+            updateViewPosition();
+
+
 
 			break;
 		case MotionEvent.ACTION_UP:
@@ -214,6 +222,7 @@ public class FloatWindowSmallView extends LinearLayout {
                 MyWindowManager.removeSmallWindow(getContext());
                 Intent intent = new Intent(getContext(), FloatWindowService.class);
                 getContext().stopService(intent);
+
 
 			} else {
 				updateViewStatus();
@@ -255,8 +264,11 @@ public class FloatWindowSmallView extends LinearLayout {
 	private void updateViewPosition() {
 		mParams.x = (int) (xInScreen - xInView);
 		mParams.y = (int) (yInScreen - yInView);
-		windowManager.updateViewLayout(this, mParams);
-		MyWindowManager.updateLauncher();
+        if(MyWindowManager.smallWindow!=null){
+            windowManager.updateViewLayout(this, mParams);
+            MyWindowManager.updateLauncher();
+        }
+
 	}
 
 	/**
@@ -271,16 +283,21 @@ public class FloatWindowSmallView extends LinearLayout {
 			
 			Log.d("tag","windowViewWidth="+windowViewWidth);
 			Log.d("tag","rocketHeight="+rocketHeight);
-			windowManager.updateViewLayout(this, mParams);
-			//smallWindowLayout.setVisibility(View.GONE);
-			//imgMonster.setVisibility(View.GONE);
-			//rocketImg.setVisibility(View.VISIBLE);
-			MyWindowManager.createLauncher(getContext());
+            if(MyWindowManager.smallWindow!=null){
+                windowManager.updateViewLayout(this, mParams);
+                //smallWindowLayout.setVisibility(View.GONE);
+                //imgMonster.setVisibility(View.GONE);
+                //rocketImg.setVisibility(View.VISIBLE);
+                MyWindowManager.createLauncher(getContext());
+            }
+
 		} else if (!isPressed) {
 			
 			mParams.width = windowViewWidth;
 			mParams.height = windowViewHeight;
-			windowManager.updateViewLayout(this, mParams);
+            if(MyWindowManager.smallWindow!=null){
+                windowManager.updateViewLayout(this, mParams);
+            }
 			//smallWindowLayout.setVisibility(View.VISIBLE);
 			//imgMonster.setVisibility(View.VISIBLE);
 			//rocketImg.setVisibility(View.GONE);
@@ -404,8 +421,10 @@ public class FloatWindowSmallView extends LinearLayout {
 
 		@Override
 		protected void onProgressUpdate(Void... values) {
-			windowManager.updateViewLayout(FloatWindowSmallView.this, mParams);
-		}
+            if(MyWindowManager.smallWindow!=null){
+                windowManager.updateViewLayout(FloatWindowSmallView.this, mParams);
+            }
+        }
 
 		@Override
 		protected void onPostExecute(Void result) {
@@ -413,8 +432,10 @@ public class FloatWindowSmallView extends LinearLayout {
 			updateViewStatus();
 			mParams.x = (int) (xDownInScreen - xInView);
 			mParams.y = (int) (yDownInScreen - yInView);
-			windowManager.updateViewLayout(FloatWindowSmallView.this, mParams);
-		}
+            if(MyWindowManager.smallWindow!=null){
+                windowManager.updateViewLayout(FloatWindowSmallView.this, mParams);
+            }
+        }
 
 	}
 	

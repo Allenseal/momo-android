@@ -48,6 +48,7 @@ public class HomeFragment extends Fragment {
     private TextView powerText;
     private TextView monthText;
     private TextView totalText;
+    private TextView petName;
 
     private ImageView monster, stage;
 
@@ -58,7 +59,8 @@ public class HomeFragment extends Fragment {
     private int layoutWidth;
     private int layoutHeight;
 
-    private String monsterName = "penguin";
+    private int monsterNumber = 0;
+    private String[] monsterName = {"Penguin", "Bear", "Seal"};
 
     private double percentFrom = 0;
     /**
@@ -79,7 +81,17 @@ public class HomeFragment extends Fragment {
 
     @Override
     public void  onResume() {
+//        if(MyWindowManager.smallWindow != null) {
+//            // 關閉懸浮窗，移除所有懸浮窗，並停止Service
+//            MyWindowManager.removeLauncher(getActivity());
+//            MyWindowManager.removeBigWindow(getActivity());
+//            MyWindowManager.removeSmallWindow(getActivity());
+//            Intent intent = new Intent(getActivity(), FloatWindowService.class);
+//            getActivity().stopService(intent);
+//        }
+
         setView();
+
         super.onResume();
     }
 
@@ -100,6 +112,9 @@ public class HomeFragment extends Fragment {
 
     protected void setView(){
         Log.d("refresh", "refresh status");
+        //get moster name
+        SharedPreferences settings = getActivity().getSharedPreferences("MOMO_SETTINGS",  0);
+        monsterNumber = settings.getInt("MONSTER_NUMBER", 0);
 
         DisplayMetrics metrics = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -179,7 +194,7 @@ public class HomeFragment extends Fragment {
         //set bar view
         //setMoneyNum("Initial", "0");
         mHoloCircularProgressBar = (HoloCircularProgressBar) rootView.findViewById(R.id.holoCircularProgressBar1);
-//        mHoloCircularProgressBar.setMarkerEnabled(false);
+        mHoloCircularProgressBar.setMarkerEnabled(false);
         //mHoloCircularProgressBar.setMarkerProgress(0);
         BarTask barTask = new BarTask("Initial", "0");
         barTask.execute();
@@ -187,10 +202,11 @@ public class HomeFragment extends Fragment {
         //set monster view
         monster = (ImageView) rootView.findViewById(R.id.monster_view);
         stage = (ImageView) rootView.findViewById(R.id.stage_view);
-
+        petName = (TextView) rootView.findViewById(R.id.pet_name);
+        petName.setText(monsterName[monsterNumber]);
 
         //TODO get monsterName from datapath
-        monsterName = "penguin";
+
         changeMonsterStatus(percentFrom);
 
         monster.setOnTouchListener(
@@ -208,6 +224,7 @@ public class HomeFragment extends Fragment {
                     }
                 }
         );
+
 
     }
 
@@ -406,20 +423,25 @@ public class HomeFragment extends Fragment {
         if(firstCommit) {
             if (status * 100 > 40) {
                 // normal
-                id = getResources().getIdentifier(monsterName + "_normal", "drawable", "com.cs.app.momo");
+                PE.putString("MONSTER_STATUS", "normal");
+                id = getResources().getIdentifier(monsterName[monsterNumber].toLowerCase() + "_normal", "drawable", "com.cs.app.momo");
             } else if (status * 100 > 10) {
                 //hungry
-                id = getResources().getIdentifier(monsterName + "_hungry", "drawable", "com.cs.app.momo");
+                PE.putString("MONSTER_STATUS", "hungry");
+                id = getResources().getIdentifier(monsterName[monsterNumber].toLowerCase() + "_hungry", "drawable", "com.cs.app.momo");
             } else {
                 //death
-                id = getResources().getIdentifier(monsterName + "_death", "drawable", "com.cs.app.momo");
+                PE.putString("MONSTER_STATUS", "death");
+                id = getResources().getIdentifier(monsterName[monsterNumber].toLowerCase() + "_death", "drawable", "com.cs.app.momo");
             }
         }else{
             PE.putString("MONSTER_STATUS", "sleep");
-            id = getResources().getIdentifier(monsterName + "_sleep", "drawable", "com.cs.app.momo");
+            id = getResources().getIdentifier(monsterName[monsterNumber].toLowerCase() + "_sleep", "drawable", "com.cs.app.momo");
         }
         PE.commit();
         monster.setImageResource(id);
+        id = getResources().getIdentifier(monsterName[monsterNumber].toLowerCase() + "_stage", "drawable", "com.cs.app.momo");
+        stage.setImageResource(id);
 
         int mW = View.MeasureSpec.makeMeasureSpec(0,View.MeasureSpec.UNSPECIFIED);
         int mH = View.MeasureSpec.makeMeasureSpec(0,View.MeasureSpec.UNSPECIFIED);

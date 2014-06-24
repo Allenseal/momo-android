@@ -17,5 +17,5 @@
     <dimen name="cost_title">100sp</dimen>
     <dimen name="null_back">400dp</dimen>
     <dimen name="home_pet_name_size">50sp</dimen>
-
+    <dimen name="monster_pet_name_size">100sp</dimen>
 </resources>

@@ -3,6 +3,7 @@ package com.cs.app.momo;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Context;
+import android.os.Build;
 import android.widget.DatePicker;
 
 import java.text.SimpleDateFormat;
@@ -18,8 +19,9 @@ class CustomDatePickerDialog extends DatePickerDialog implements DatePicker.OnDa
         super(context,callBack, year, monthOfYear, dayOfMonth);
         mDatePicker = new DatePickerDialog(context, callBack, year, monthOfYear, dayOfMonth);
 
-        mDatePicker.getDatePicker().init(year, monthOfYear, dayOfMonth, this);
-
+        if (Build.VERSION.SDK_INT >= 11) {
+            mDatePicker.getDatePicker().init(year, monthOfYear, dayOfMonth, this);
+        }
         updateTitle(year, monthOfYear);
 
     }

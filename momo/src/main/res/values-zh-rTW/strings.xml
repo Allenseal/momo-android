@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">MoMo</string>
     <string name="action_contact">桌面寵物</string>
     <string name="title_section1">主頁</string>
     <string name="title_section2">記錄</string>
     <string name="title_section3">Reward</string>
     <string name="title_section4">Friend</string>
-    <string name="title_section5">Collection</string>
+    <string name="title_section5">寵物</string>
     <string name="title_section6">Settings</string>
     <string name="total">收入總合</string>
     <string name="monthly_cost">今月花費</string>
@@ -62,5 +60,12 @@
     <string name="kind_fun">玩樂</string>
     <string name="kind_others">其他</string>
     <string name="kind_yummy">好吃</string>
+    <string name="quick_add">快速記帳</string>
+    <string name="category">收入/花費</string>
+
+    <string name="select_monster">寵物選擇</string>
+    <string name="select_sure">確定選擇</string>
+    <string name="yes">確定</string>
+    <string name="no">取消</string>
 
 </resources>
