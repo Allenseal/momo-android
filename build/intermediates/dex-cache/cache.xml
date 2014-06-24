@@ -6,7 +6,25 @@
         jar="D:\SSLAB\momo-android-on-play\build\intermediates\exploded-aar\momo-android-on-play\HoloCircularProgressBar\unspecified\classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="5b0027a47dd12d3e3fb81c65fa44d6dc24a42d74"/>
+        sha1="03c88cfdefd13686afa56cc04f5cb5ad8b9fd460"/>
+    <item
+        dex="D:\SSLAB\momo-android-on-play\momo\build\intermediates\pre-dexed\debug\support-v4-19.1.0-cd41ef807caadb29c9df0131dee869d3723185ad.jar"
+        jar="C:\Program Files\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+    <item
+        dex="D:\SSLAB\momo-android-on-play\momo\build\intermediates\pre-dexed\debug\feedback_v6-36d33948a1d014640323e009888ea1764c2d84eb.jar"
+        jar="D:\SSLAB\momo-android-on-play\momo\libs\feedback_v6.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="21e8cf4719568f3a82309d6c8b8b740da6ab2311"/>
+    <item
+        dex="D:\SSLAB\momo-android-on-play\momo\build\intermediates\pre-dexed\debug\classes-abc2aebf4d230d6c54e7b02c12e4a9fa971af7a0.jar"
+        jar="D:\SSLAB\momo-android-on-play\build\intermediates\exploded-aar\momo-android-on-play\nineoldandroid\unspecified\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="20d9e0f5cf2d38862fd888fb5e004514927729e2"/>
     <item
         dex="D:\SSLAB\momo-android-on-play\momo\build\intermediates\pre-dexed\debug\classes-4cc45a735138100115155a5fbb68008293279b85.jar"
         jar="D:\SSLAB\momo-android-on-play\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\classes.jar"
@@ -18,7 +36,7 @@
         jar="D:\SSLAB\momo-android-on-play\build\intermediates\exploded-aar\momo-android-on-play\HoloGraphLibrary\unspecified\classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="0182334ae12f427a8c618cfd9bd372697d0ce621"/>
+        sha1="94e960106c31fad57f319e3b778580dd7f6f51ac"/>
     <item
         dex="D:\SSLAB\momo-android-on-play\momo\build\intermediates\pre-dexed\debug\annotations-12.0-311c2ce3618438f296f9da37982dddb3beeb414a.jar"
         jar="D:\SSLAB\momo-android-on-play\build\intermediates\exploded-aar\momo-android-on-play\HoloGraphLibrary\unspecified\libs\annotations-12.0.jar"
@@ -26,23 +44,11 @@
         revision="19.1.0"
         sha1="bbcf6448f6d40abe506e2c83b70a3e8bfd2b4539"/>
     <item
-        dex="D:\SSLAB\momo-android-on-play\momo\build\intermediates\pre-dexed\debug\support-v4-19.1.0-cd41ef807caadb29c9df0131dee869d3723185ad.jar"
-        jar="C:\Program Files\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
-    <item
         dex="D:\SSLAB\momo-android-on-play\momo\build\intermediates\pre-dexed\debug\classes-e6bf7915b48bea7a7d918d6dd2a7e81809b5c93b.jar"
         jar="D:\SSLAB\momo-android-on-play\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\19.0.1\classes.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="b1701c49371231e0423b7588539f24bdab485019"/>
-    <item
-        dex="D:\SSLAB\momo-android-on-play\momo\build\intermediates\pre-dexed\debug\feedback_v6-36d33948a1d014640323e009888ea1764c2d84eb.jar"
-        jar="D:\SSLAB\momo-android-on-play\momo\libs\feedback_v6.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="21e8cf4719568f3a82309d6c8b8b740da6ab2311"/>
     <item
         dex="D:\SSLAB\momo-android-on-play\momo\build\intermediates\pre-dexed\debug\classes-5a9b4fa05492cae3fc5757fc26ae58d65199f77b.jar"
         jar="D:\SSLAB\momo-android-on-play\build\intermediates\exploded-aar\com.astuetz\pagerslidingtabstrip\1.0.1\classes.jar"
@@ -50,16 +56,10 @@
         revision="19.1.0"
         sha1="7912610ed96381c25c36d986eba422731b9641b6"/>
     <item
-        dex="D:\SSLAB\momo-android-on-play\momo\build\intermediates\pre-dexed\debug\classes-abc2aebf4d230d6c54e7b02c12e4a9fa971af7a0.jar"
-        jar="D:\SSLAB\momo-android-on-play\build\intermediates\exploded-aar\momo-android-on-play\nineoldandroid\unspecified\classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="7f400e7e03edbd5710aeffea43da9eac61361b98"/>
-    <item
         dex="D:\SSLAB\momo-android-on-play\momo\build\intermediates\pre-dexed\debug\classes-bf15dc024abc31d818902127c303709a1840a5b2.jar"
         jar="D:\SSLAB\momo-android-on-play\build\intermediates\exploded-aar\momo-android-on-play\datetimepicker\unspecified\classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="a18c1e43a6bdd77f9dacebb1a1a9aa9956b01f0a"/>
+        sha1="f5c7c563067118dba445a751006e37e245361e9c"/>
 
 </pre-dex-items>

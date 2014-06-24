@@ -61,28 +61,26 @@ public class DataListAdapter extends BaseAdapter implements ListAdapter {
         TextView moneyText = (TextView) view.findViewById(R.id.money_text);
 //        TextView tmpText = (TextView) view.findViewById(R.id.tmp_text);
 
-        for(int i= 0 ; i<count ; i++){
-            if(position == i){
-                dateText.setText(date[i]);
-                commentText.setText(comment[i] + (tmp[i] == null || tmp[i].equals("")? "" : " - " + tmp[i]));
-                if(fc[i].equals("feed")){
-                    fcText.setText(R.string.feed);
-                }else{
-                    fcText.setText(R.string.cost);
-                }
-                dateText.setText(date[i]);
-                moneyText.setText(money[i]+"$");
-//                tmpText.setText("Comment: " + (tmp[i] == null || tmp[i].equals("")? "" : tmp[i]));
-                LinearLayout bg = (LinearLayout) view.findViewById(R.id.detail_content);
-                if(fc[i].equals("feed")){
-                    bg.setBackgroundColor(Color.parseColor("#2bacb5"));
-                    icon.setImageResource(R.drawable.feed);
-                }else{
-                    bg.setBackgroundColor(Color.parseColor("#e84d5b"));
-                    icon.setImageResource(R.drawable.cost);
-                }
-            }
+
+        dateText.setText(date[position]);
+        commentText.setText(comment[position] + (tmp[position] == null || tmp[position].equals("")? "" : " - " + tmp[position]));
+        if(fc[position].equals("feed")){
+            fcText.setText(R.string.feed);
+        }else{
+            fcText.setText(R.string.cost);
         }
+        dateText.setText(date[position]);
+        moneyText.setText(money[position]+"$");
+
+        LinearLayout bg = (LinearLayout) view.findViewById(R.id.detail_content);
+        if(fc[position].equals("feed")){
+            bg.setBackgroundColor(Color.parseColor("#2bacb5"));
+            icon.setImageResource(R.drawable.feed);
+        }else{
+            bg.setBackgroundColor(Color.parseColor("#e84d5b"));
+            icon.setImageResource(R.drawable.cost);
+        }
+
 
 
         return view;

@@ -6,7 +6,7 @@
     <string name="title_section3">Reward</string>
     <string name="title_section4">Friend</string>
     <string name="title_section5">寵物</string>
-    <string name="title_section6">Settings</string>
+    <string name="title_section6">設定</string>
     <string name="total">收入總合</string>
     <string name="monthly_cost">今月花費</string>
     <string name="jan">1月</string>
@@ -67,5 +67,8 @@
     <string name="select_sure">確定選擇</string>
     <string name="yes">確定</string>
     <string name="no">取消</string>
+
+    <string name="widget">桌面小工具</string>
+    <string name="feedback">回應我們</string>
 
 </resources>

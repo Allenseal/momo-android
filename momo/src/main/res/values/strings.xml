@@ -70,4 +70,8 @@
     <string name="select_sure">Do you want to select</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+
+    <string name="widget">Floating widget</string>
+    <string name="feedback">Feedback</string>
+
 </resources>

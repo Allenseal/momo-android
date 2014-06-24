@@ -35,6 +35,7 @@ public class MainActivity extends FragmentActivity implements DataFragment.OnHea
     private HomeFragment homeFragment;
     private DataFragment dataFragment;
     private CollectionFragment collectionFragment;
+    private SettingsFragment settingsFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -189,7 +190,12 @@ public class MainActivity extends FragmentActivity implements DataFragment.OnHea
 
     public class MyPagerAdapter extends FragmentPagerAdapter {
 
-        private final String[] TITLES = { getResources().getString(R.string.title_section1), getResources().getString(R.string.title_section2), getResources().getString(R.string.title_section5)}; //more
+        private final String[] TITLES = {
+                getResources().getString(R.string.title_section1),
+                getResources().getString(R.string.title_section2),
+                getResources().getString(R.string.title_section5),
+                getResources().getString(R.string.title_section6)
+        }; //more
 
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -217,6 +223,9 @@ public class MainActivity extends FragmentActivity implements DataFragment.OnHea
                 case 2:
                     collectionFragment = CollectionFragment.newInstance(position);
                     return collectionFragment;
+                case 3:
+                    settingsFragment = SettingsFragment.newInstance(position);
+                    return settingsFragment;
 //                case 2:
 //                    return ChartFragment.newInstance(position);
                 default:

@@ -1,0 +1,26 @@
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.cs.app.momo.MainActivity$DataFragment" android:background="@color/gray_light"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <ListView android:id="@+id/data_list"
+                  android:layout_width="match_parent"
+                  android:layout_height="0dip"
+                  android:layout_weight="1"
+                  android:divider="@android:color/transparent"
+                  android:dividerHeight="0dp"
+                  android:fadingEdge="none"
+                  android:drawSelectorOnTop="false"
+                  android:paddingTop="0dp" android:background="@color/white"/>
+    </LinearLayout>
+
+
+</FrameLayout>
