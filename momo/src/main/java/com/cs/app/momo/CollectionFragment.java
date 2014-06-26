@@ -127,7 +127,7 @@ public class CollectionFragment extends Fragment {
             public View makeView() {
                 ImageView imageView = new ImageView(getActivity());
                 imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
-                imageView.setLayoutParams(new ImageSwitcher.LayoutParams(LayoutParams.FILL_PARENT, 450));
+                imageView.setLayoutParams(new ImageSwitcher.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
                 return imageView;
             }
 
@@ -137,7 +137,7 @@ public class CollectionFragment extends Fragment {
             public View makeView() {
                 ImageView imageView = new ImageView(getActivity());
                 imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
-                imageView.setLayoutParams(new ImageSwitcher.LayoutParams(LayoutParams.FILL_PARENT, 450));
+                imageView.setLayoutParams(new ImageSwitcher.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
                 return imageView;
             }
 
